@@ -2,3 +2,4 @@
 .idea/services.iml
 mariadb/db
 mariadb/logs
+elasticsearch/logs

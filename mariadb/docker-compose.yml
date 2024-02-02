@@ -1,5 +1,5 @@
 mysql:
-    image: mariadb
+    image: mariadb:10.4
     container_name: mysql
     volumes:
       - ./db:/var/lib/mysql/
