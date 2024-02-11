@@ -1,0 +1,13 @@
+version: '2'
+services:
+    apache2:
+        build: .
+        container_name: apache2
+        volumes:
+            - ./logs:/var/log/apache2/
+            - ./pages:/var/www/html
+        ports:
+            - "80:80"
+        restart: always
+        external_links:
+        - "mysql:mysql"

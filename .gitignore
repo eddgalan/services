@@ -3,3 +3,4 @@
 mariadb/db
 mariadb/logs
 elasticsearch/logs
+apache2/logs
