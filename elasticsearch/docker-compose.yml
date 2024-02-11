@@ -1,12 +1,12 @@
-elasticsearch7:
-    image: elasticsearch:7.17.17
-    container_name: elasticsearch7
-    volumes:
-      - ./logs:/var/log/elasticsearch/
-    environment:
-      - discovery.type=single-node
-    ports:
-      - "9200:9200"
-    restart: always
-#      networks:
-#        - host
+version: '2'
+services:
+  elasticsearch7:
+      image: elasticsearch:7.17.17
+      container_name: elasticsearch7
+      volumes:
+        - ./logs:/var/log/elasticsearch/
+      environment:
+        - discovery.type=single-node
+      ports:
+        - "9200:9200"
+      restart: always
