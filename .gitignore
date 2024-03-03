@@ -5,3 +5,5 @@ mariadb/logs
 elasticsearch/logs
 apache2/logs
 apache2/pages/cursoPHP/composer/vendor
+*vendor/
+*composer.lock

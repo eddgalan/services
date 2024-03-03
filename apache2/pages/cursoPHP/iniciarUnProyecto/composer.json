@@ -1,0 +1,25 @@
+{
+    "name": "alphateam/my-first-project",
+    "description": "Ejemplo para el curso de Composer",
+    "type": "project",
+    "require": {
+        "guzzlehttp/guzzle": "7.9.x-dev",
+        "zendframework/zend-soap": "^2.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "11.1.x-dev",
+        "firebase/php-jwt": "dev-main"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Alphateam\\MyFirstProject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Edson Galan"
+        }
+    ],
+    "minimum-stability": "dev"
+}
