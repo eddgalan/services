@@ -1,0 +1,19 @@
+{
+    "name": "PHP 8",
+    "dockerComposeFile": "../apache2/docker-compose.yml",
+    "service": "apache2",
+    "workspaceFolder": "/var/www/html",
+    "settings": {
+        "php.validate.executablePath": "/usr/local/bin/php",
+        "php.suggest.basic": false,
+        "php.executablePath": "/usr/local/bin/php",
+        //"phpunit.phpunit": "/path/to/your/phpunit"
+    },
+    "extensions": [
+        "felixfbecker.php-intellisense",
+        "ms-azuretools.vscode-docker",
+        "xdebug.php-debug",
+        "xdebug.php-pack",
+        "zobo.php-intellisense"
+    ]
+}
