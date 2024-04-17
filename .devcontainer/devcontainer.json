@@ -3,6 +3,7 @@
     "dockerComposeFile": "../apache2/docker-compose.yml",
     "service": "apache2",
     "workspaceFolder": "/var/www/html",
+    //"remoteUser": "www-data",
     "settings": {
         "php.validate.executablePath": "/usr/local/bin/php",
         "php.suggest.basic": false,
@@ -15,5 +16,5 @@
         "xdebug.php-debug",
         "xdebug.php-pack",
         "zobo.php-intellisense"
-    ]
+    ],
 }
