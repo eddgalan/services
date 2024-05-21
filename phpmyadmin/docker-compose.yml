@@ -8,5 +8,11 @@ services:
       - 8080:80
     environment:
       - PMA_ARBITRARY=1
-    external_links:
-      - "mysql:mysql"
+      - PMA_HOST=mysql
+      - PMA_USER=root
+      - PMA_PASSWORD=12345678a
+    networks:
+      - spider_web
+networks:
+  spider_web:
+    external: true
