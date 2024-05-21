@@ -10,3 +10,8 @@ services:
       ports:
         - "9200:9200"
       restart: always
+      networks:
+            - spider_web
+networks:
+  spider_web:
+    external: true
