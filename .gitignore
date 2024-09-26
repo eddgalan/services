@@ -1,5 +1,6 @@
 .idea/
 .idea/services.iml
+nginx/logs
 mariadb/db
 mariadb/logs
 elasticsearch/logs

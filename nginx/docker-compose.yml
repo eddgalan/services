@@ -1,0 +1,16 @@
+version: '2'
+services:
+  nginx:
+    image: nginx:1.21.6
+    container_name: nginx
+    volumes:
+      - ./nginx:/etc/nginx/conf.d/
+      - ./logs:/var/log/nginx/
+    ports:
+      - "80:80"
+    restart: always
+    networks:
+      - spider_web
+networks:
+  spider_web:
+    external: true
