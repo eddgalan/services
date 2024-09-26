@@ -1,5 +1,6 @@
 .idea/
 .idea/services.iml
+.DS_Store
 nginx/logs
 mariadb/db
 mariadb/logs
