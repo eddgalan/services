@@ -1,0 +1,19 @@
+{
+    "name": "edsongalan/platzi",
+    "description": "Basic Project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "EdsonGalan",
+            "email": "edd.galan@hotmail.com"
+        }
+    ],
+    "require": {}
+}
