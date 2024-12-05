@@ -1,9 +1,13 @@
 .idea/
 .idea/services.iml
+.DS_Store
+nginx/logs
 mariadb/db
 mariadb/logs
 elasticsearch/logs
 apache2/logs
+apache2/pages/cursoPHP/composer/
+mongoDB/data
 apache2/pages/cursoPHP/composer/vendor
 *vendor/
 *.phpunit.result.cache
