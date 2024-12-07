@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 class Request
 {
-    protected $segments = [];
-    protected $controller;
-    protected $methods;
+    protected array $segments = [];
+    protected string $controller;
+    protected string $method;
 
     public function __construct()
     {
@@ -21,7 +21,7 @@ class Request
     /**
      * @return void
      */
-    public function setController()
+    public function setController(): void
     {
         $this->controller = empty($this->segments[0]) ? 'home' : $this->segments[0];
     }
@@ -29,9 +29,41 @@ class Request
     /**
      * @return void
      */
-    public function setMethod()
+    public function setMethod(): void
     {
-        $this->methods = empty($this->segments[1]) ? 'index' : $this->segments[1];
+        $this->method = empty($this->segments[1]) ? 'index' : $this->segments[1];
     }
 
+    /**
+     * @return string
+     */
+    public function getController(): string
+    {
+        $controller = ucfirst($this->controller);
+        return "App\Http\Controllers\\{$controller}Controller";
+    }
+
+    /**
+     * @return string
+     */
+    public function getMethod(): string
+    {
+        return $this->method;
+    }
+
+    /**
+     * @return void
+     */
+    public function send(): void
+    {
+        $controller = $this->getController();
+        $method = $this->getMethod();
+
+        $response = call_user_func([
+            new $controller,
+            $method
+        ]);
+
+        $response->send();
+    }
 }
