@@ -29,9 +29,9 @@ class Response
     {
         $view = $this->getView();
 
-        $content = file_get_contents(__DIR__ . "/../../views/$view.php");
+        $content = file_get_contents(viewPath($view));
 
-        require __DIR__ . "/../../views/layout.php";
+        require viewPath('layout');
     }
 }
 
