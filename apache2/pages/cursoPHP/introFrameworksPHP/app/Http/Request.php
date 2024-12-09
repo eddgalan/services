@@ -23,7 +23,7 @@ class Request
      */
     public function setController(): void
     {
-        $this->controller = empty($this->segments[0]) ? 'home' : $this->segments[0];
+        $this->controller = empty($this->segments[3]) ? 'home' : $this->segments[3];
     }
 
     /**
@@ -31,7 +31,7 @@ class Request
      */
     public function setMethod(): void
     {
-        $this->method = empty($this->segments[1]) ? 'index' : $this->segments[1];
+        $this->method = empty($this->segments[4]) ? 'index' : $this->segments[4];
     }
 
     /**
