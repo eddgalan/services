@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Response;
+
 class HomeController
 {
-
-    public function index(): \App\Http\Response
+    /**
+     * @return Response
+     */
+    public function index(): Response
     {
         return view('home');
     }

@@ -2,6 +2,8 @@
 
 namespace app\Http;
 
+use \Exception;
+
 class Request
 {
     protected array $segments = [];
@@ -63,6 +65,16 @@ class Request
             new $controller,
             $method
         ]);
+
+        try {
+            if ($response instanceof Response) {
+                $response->send();
+            } else {
+                throw new Exception('Unexpected response type');
+            }
+        } catch (Exception $e) {
+            echo "Details: {$e->getMessage()}\n{$e->getTraceAsString()}";
+        }
 
         $response->send();
     }
